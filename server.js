@@ -5,8 +5,12 @@ const { configDotenv } = require('dotenv').config()
 const body = require('body-parser')
 const cookieParser = require('cookie-parser')
 const port = process.env.SERVER_PORT || 8000
-
-
+const cors=require('cors');
+app.use(
+    cors({
+      origin: '*',
+    }),
+  )
 app.use(body.json({ limit: '5mb' }))
 app.use(body.urlencoded({ extended: true }))
 

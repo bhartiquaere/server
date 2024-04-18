@@ -1,7 +1,7 @@
 const Helper={};
 const CryptoJS = require("crypto-js");
 
-Helper.response = (status, message, data = [], res, statusCode) => {
+Helper.response= (status, message, data = [], res, statusCode) => {
     res.status(statusCode).json({
       status: status,
       message: message,

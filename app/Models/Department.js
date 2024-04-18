@@ -8,7 +8,7 @@ const Department=sequelize.define("department",{
         allowNull:false
     },
     status:{
-        type:DataTypes.STRING,
+        type:DataTypes.BOOLEAN,
         allowNull:false,
         defaultValue:1
     }
@@ -16,7 +16,7 @@ const Department=sequelize.define("department",{
 
 // sequelize.sync()
 // .then(()=>{
-//     console.log("Login Created Succesfully")
+//     console.log("Deparment Created Succesfully")
 // })
 // .catch((error)=>{
 //     console.log(error);
