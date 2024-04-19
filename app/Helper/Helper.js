@@ -28,3 +28,5 @@ Helper.SpiltToken=(data)=>{
 };
 
 
+module.exports = Helper;
+

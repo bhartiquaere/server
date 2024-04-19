@@ -12,6 +12,7 @@ exports.DepartmentCreate=async(req,res)=>{
             res.status(200).json({
                 status: "Success",
                 message: "Department Created Successfully",
+                data:data
               });
             console.log("Department Created Successfully.");
         }
