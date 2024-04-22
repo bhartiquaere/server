@@ -1,14 +1,15 @@
 const { DataTypes } = require("sequelize");
 
 const sequelize = require("../Connection/conn");
+const HOD = require("./HeadOfDepartment");
 
 const Designation = sequelize.define("designation",
     {
-        department: {
-            type: DataTypes.STRING,
+        department_id: {
+            type: DataTypes.INTEGER,
             allowNull: false
         },
-        designation: {
+        designation_name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -19,6 +20,8 @@ const Designation = sequelize.define("designation",
         }
     });
 
+    HOD.belongsTo(Designation,{foreignKey:"designation_id",as:"designation"});
+    
 // sequelize.sync()
 // .then(()=>{
 //     console.log("Designation Table Created.")
