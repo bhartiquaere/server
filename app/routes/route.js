@@ -4,7 +4,7 @@ const { DepartmentCreate, DepartmentUpdate, DepartmentGet, DepartmentDelete } = 
 const { CreateDesignation, GetDesignation, UpdateDesignation, DeleteDesignation } = require("../Controller/Designation");
 const { TowerCreate, GetTowerList, UpdatedTower, DeleteTower } = require("../Controller/Tower");
 const { CreateHod, UpdateHod, GetHod, DeleteHod } = require("../Controller/HOD");
-const { CreateRoom } = require("../Controller/Room");
+const { CreateRoom, UpdateRoom, DeleteRoom, GetRoom } = require("../Controller/Room");
 const router = express.Router();
 
 
@@ -35,6 +35,11 @@ router.post("/delete-tower",DeleteTower)
 
 //Room API's
 router.post("/add-room",CreateRoom);
+router.post("/get-room",GetRoom);
+router.post("/update-room",UpdateRoom);
+router.post("/delete-room",DeleteRoom);
 
+//charge Type API's
+router.post("/")
 
 module.exports = router;
