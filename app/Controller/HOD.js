@@ -38,7 +38,7 @@ exports.UpdateHod = async (req, res) => {
         }
         )
         if (update) {
-            console.log("Hod Created Successfully")
+            console.log("Hod Updated Successfully")
             Helper.response("Success", "Hod Update Successfully !", {}, res, 200)
         }
     } catch (error) {
